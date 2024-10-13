@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import { Kanit } from 'next/font/google'
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -12,6 +12,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const kanit = Kanit({subsets: ['latin'], variable: '--font-kanit', weight: ['700']}) 
 
 export const metadata: Metadata = {
   title: "Moodl",
@@ -26,7 +27,7 @@ export default function RootLayout({
 
   const header = (
     <header className="p-4 sm:p-8 flex item-center justify-between gap-4">
-      <h1>Header UwU</h1>
+      <h1 className={`text-base sm:text-lg ${kanit.className}`}>Header UwU</h1>
     </header>
   )
   
