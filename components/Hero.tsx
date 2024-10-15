@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Calendar from './Calendar'
+import Button from './Button'
 const Hero = () => {
   return (
     <div className={`py-10 sm:py-14 md:py-20 flex flex-col gap-5`}>
@@ -11,6 +12,12 @@ const Hero = () => {
         Create your mood record and see how you feel 
         <span className='font-semibold'> every day of every year!</span>
       </p>
+      <div className='grid sm:grid-cols-2 mx-auto w-fit grid-cols-1 gap-10'>
+        <Button text={'Login'} dark/>
+        <Button text={'Sign-Up'} />
+      </div>
+
+      <Calendar />
     </div>
   )
 }

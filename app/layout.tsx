@@ -28,19 +28,25 @@ export default function RootLayout({
   const header = (
     <header className="p-4 sm:p-8 flex item-center justify-between gap-4">
       <h1 className={`text-base sm:text-lg ${kanit.className}`}>Moodl</h1>
+      <div className="flex items-center justify-between">
+        placeholder :3
+      </div>
     </header>
   )
   
   const footer = (
-    <footer>
-      footer
+    <footer className="grid place-items-center">
+      <p>
+        created with luv :3
+      </p>
+
     </footer>
   )
 
   return (
     <html lang="en">
       <body
-        className={` w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen 
+        className={`h-screen justify-between w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen 
         flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {header}
